@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build-css": "node-sass -w -r webroot/ -o webroot/",
-    "lite": "lite-server -c ./bs-config.json",
+    "lite": "lite-server -c ./bs-config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
@@ -33,10 +33,12 @@
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.2",
     "system-text": "^0.1.0",
-    "systemjs": "^0.19.22"
+    "systemjs": "^0.19.22",
+    "zone.js": "^0.5.15"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "connect-history-api-fallback": "^1.1.0",
     "lite-server": "^2.1.0",
     "node-sass": "^3.4.2",
     "typescript": "^1.7.5"
