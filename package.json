@@ -1,0 +1,44 @@
+{
+  "name": "gondola",
+  "version": "1.0.0",
+  "description": "Test Angular 2 app for Knarr presentation",
+  "main": "main.js",
+  "scripts": {
+    "build-css": "node-sass -w -r webroot/ -o webroot/",
+    "lite": "lite-server -c ./bs-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch",
+    "tsc:h": "tsc --help",
+    "start": "concurrently --kill-others \"npm run build-css\" \"npm run tsc:w\" \"npm run lite\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zer0Stra1n/Gondola.git"
+  },
+  "keywords": [
+    "Angular2",
+    "test"
+  ],
+  "author": "Seth Sandor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zer0Stra1n/Gondola/issues"
+  },
+  "homepage": "https://github.com/Zer0Stra1n/Gondola#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.7",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "system-text": "^0.1.0",
+    "systemjs": "^0.19.22"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "typescript": "^1.7.5"
+  }
+}
