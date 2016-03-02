@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import tpl from './gondola.html!text';
+import tpl from './gondola.html';
 
 @Component({
     selector: 'my-gondola',
