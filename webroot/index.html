@@ -14,18 +14,18 @@
     <script>
       System.config({
         map: {
-            text: 'node_modules/system-text/text.js'
+            'text': 'node_modules/systemjs-plugin-text/text.js'
         },
         packages: {        
           'webroot': {
             format: 'register',
             defaultExtension: 'js',
-            meta: {
-                'webroot/**/*.html': {
-                    defaultExtension: false
-                }
-            }
           }
+        },
+        meta: {
+           '*.html': {
+              loader: 'text'
+            }
         }
       });
       System.import('webroot/main')
@@ -34,6 +34,6 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+    <my-gondola>Loading...</my-gondola>
   </body>
 </html>
