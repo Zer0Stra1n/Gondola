@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
-import tpl from './gondola.html';
+import gondola from './gondola.html';
 
 @Component({
     selector: 'my-gondola',
-    template: tpl
+    template: gondola
 })
 
 export class Gondola { }
