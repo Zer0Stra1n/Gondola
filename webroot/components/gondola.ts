@@ -6,4 +6,7 @@ import gondola from './gondola.html';
     template: gondola
 })
 
-export class Gondola { }
+export class Gondola { 
+    public title = 'Tour of Heroes';
+    public hero = 'Windstorm';
+}
