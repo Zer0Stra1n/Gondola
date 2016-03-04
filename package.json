@@ -4,6 +4,7 @@
   "description": "Test Angular 2 app for Knarr presentation",
   "main": "main.js",
   "scripts": {
+    "bundle": "node builder.js",
     "build-css": "node-sass -w -r webroot/ -o webroot/",
     "lite": "lite-server -c ./bs-config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
