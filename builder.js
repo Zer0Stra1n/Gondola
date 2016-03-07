@@ -1,4 +1,3 @@
-var path = require("path");
 var Builder = require('systemjs-builder');
 
 // optional constructor options
