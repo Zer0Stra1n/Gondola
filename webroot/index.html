@@ -4,28 +4,34 @@
 <head>
     <title>Gondola</title>
     <base href="/">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 1. Load libraries -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+
+
+<body>
+    <my-gondola>Loading...</my-gondola>
+
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+
+    <!-- Actual Functional Dependency Libraries -->
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.js"></script>
+
+    <!-- Load System Config -->
     <script src="system-config.js"></script>
-    <!-- 2. Configure SystemJS -->
     <script>
         System.import('webroot/boot')
             .then(null, console.error.bind(console));
     </script>
-</head>
-<!-- 3. Display the application -->
-
-<body>
-    <my-gondola>Loading...</my-gondola>
 </body>
 
 </html>

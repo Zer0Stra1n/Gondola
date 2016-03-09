@@ -8,12 +8,14 @@ builder.config({
     //     'angular2':  'node_modules/angular2'
     // },
     meta: {
-       'angular2/*' : {build: false}
+       'angular2/*' : {build: false},
+       'rxjs/*' : {build: false},
+       'ng2-bootstrap/*' : {build: false}
     }      
 });
 
 
-builder.bundle('webroot/boot.js - [angular2]', 'webroot/boot.min.js', 
+builder.bundle('webroot/boot.js - [angular2 && rxjs]', 'webroot/boot.min.js', 
     {
         normalize: true,
         minify: true,
