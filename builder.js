@@ -16,7 +16,7 @@ builder.config({
 builder.bundle('webroot/boot.js - [angular2]', 'webroot/boot.min.js', 
     {
         normalize: true,
-        minify: false,
+        minify: true,
         mangle: false,
         globalDefs: { DEBUG: false }
     })

@@ -10,6 +10,9 @@ System.config({
             meta: {
                 '*.html': {
                     loader: 'text'
+                },
+                '*.css': {
+                    loader: 'text'
                 }
             }
         }
