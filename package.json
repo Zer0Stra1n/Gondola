@@ -12,8 +12,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
     "tsc:h": "tsc --help",
-    "start": "concurrently --kill-others \"npm run watch-css\" \"npm run tsc:w\" \"npm run lite\"",
-    "prestart": "npm run build-css"
+    "start": "npm run build-css && concurrently --kill-others \"npm run watch-css\" \"npm run tsc:w\" \"npm run lite\""
   },
   "repository": {
     "type": "git",
