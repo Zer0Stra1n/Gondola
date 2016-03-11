@@ -1,9 +1,12 @@
 import {Component} from 'angular2/core';
-import gondola from './gondola.html';
+import {GondolaHeaderComponenet} from './header/header';
+import {GondolaFooterComponenet} from './footer/footer';
+import gondolaTmpl from './gondola.html';
 
 @Component({
     selector: 'my-gondola',
-    template: gondola
+    template: gondolaTmpl,
+    directives: [GondolaHeaderComponenet, GondolaFooterComponenet]
 })
 
 export class Gondola { 
