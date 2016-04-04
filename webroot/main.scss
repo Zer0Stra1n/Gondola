@@ -53,7 +53,7 @@ $enable-flex: true;
 @import "../node_modules/bootstrap/scss/_utilities-spacing";
 @import "../node_modules/bootstrap/scss/_utilities-responsive";
 
+//Icons
+
+@import "../node_modules/font-awesome/scss/font-awesome"
 //Global app styles from here out
-.boop{
-    color: pink;
-}
