@@ -1,5 +1,18 @@
 @import "../node_modules/bootstrap/scss/_variables";
+@import "../node_modules/font-awesome/scss/_variables";
 
+//Turning on Flexbox
+$enable-flex: true;
+
+//Updating Font-Awesome Path & Making Size Uniform w/ Text
+$fa-font-path: "../node_modules/font-awesome/fonts";
+$fa-font-size-base: 1rem;
+
+$body-bg: $gray-lighter;
+$btn-padding-x: $btn-padding-y;
+
+$white: #fff;
 $brand-primary: #21b2f3;
 $brand-success: #76b900;
 
+$border-card: rgba(55,58,60, .2);

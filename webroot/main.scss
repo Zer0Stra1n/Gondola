@@ -1,9 +1,6 @@
 @import './variables.scss';
 
-//Turning on Flexbox
-$enable-flex: true;
-
-// Core variables and mixins
+//Mixins
 @import "../node_modules/bootstrap/scss/_mixins";
 
 // Reset and dependencies
@@ -54,6 +51,20 @@ $enable-flex: true;
 @import "../node_modules/bootstrap/scss/_utilities-responsive";
 
 //Icons
+@import "../node_modules/font-awesome/scss/font-awesome";
 
-@import "../node_modules/font-awesome/scss/font-awesome"
 //Global app styles from here out
+
+i {
+   margin-left: 5px;
+   margin-right: 5px; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.jumbotron{
+    background-color: $gray-lightest;
+    border: 1px solid $border-card;   
+}
