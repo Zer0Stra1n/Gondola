@@ -1,19 +1,18 @@
 @import '../../variables.scss';
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 60px;
     line-height: 60px;
     font-size: $font-size-sm;
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 0;
     
     a {
-        color: $gray-light;
+       color: $navbar-dark-color;
     }
     
     a:hover{
-        color: $gray-lightest;
+       color: $navbar-dark-hover-color;
     }
 }

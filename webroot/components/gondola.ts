@@ -1,23 +1,40 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+
+//Shell template
+import gondolaTmpl from './gondola.html';
+
+//Child Components
 import {GondolaHeaderComponenet} from './header/header';
 import {GondolaFooterComponenet} from './footer/footer';
-import gondolaTmpl from './gondola.html';
+
+//Route Components
+import {ArchiveViewComponenet} from './archive_view/archive_view';
 
 @Component({
     selector: 'my-gondola',
     template: gondolaTmpl,
-    directives: [GondolaHeaderComponenet, GondolaFooterComponenet],
+    directives: [GondolaHeaderComponenet, GondolaFooterComponenet, ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS]
 })
 
-// @RouteConfig([
-//     {
-//         path: '/',
-//         name: '',
-//         component: 
-//     }
-// ])
+@RouteConfig([
+    {
+        path: '/',
+        name: 'Archive',
+        component: ArchiveViewComponenet 
+    },
+        {
+        path: '/boop',
+        name: 'Boop',
+        component: ArchiveViewComponenet
+    },
+        {
+        path: '/test',
+        name: 'Test',
+        component: ArchiveViewComponenet
+    }
+])
 
 export class Gondola { 
     public title = 'Tour of Heroes';
