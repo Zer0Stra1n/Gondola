@@ -1,6 +1,9 @@
 @import "../node_modules/bootstrap/scss/_variables";
 @import "../node_modules/font-awesome/scss/_variables";
 
+//Mixins
+@import "../node_modules/bootstrap/scss/_mixins";
+
 //Turning on Flexbox
 $enable-flex: true;
 
