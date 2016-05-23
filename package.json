@@ -6,12 +6,12 @@
   "scripts": {
     "bundle": "node builder.js",
     "watch-css": "node-sass webroot/ -o webroot/ --output-style compressed && node-sass -w -r webroot/ -o webroot/ --output-style compressed",
-    "lite": "lite-server -c ./bs-config.js",
+    "server": "node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
     "tsc:h": "tsc --help",
-    "start": "concurrently --kill-others \"npm run watch-css\" \"npm run tsc:w\" \"npm run lite\""
+    "start": "concurrently --kill-others \"npm run watch-css\" \"npm run tsc:w\" \"npm run server\""
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "bootstrap": "^4.0.0-alpha.2",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.33.13",
+    "express": "^4.13.4",
     "font-awesome": "^4.5.0",
     "ng2-bootstrap": "^1.0.5",
     "reflect-metadata": "0.1.2",
