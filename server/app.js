@@ -4,13 +4,17 @@ var express = require('express'),
     routes = require('./routes'),
     webroot = path.resolve(__dirname, '../webroot'),
     node_modules = path.resolve(__dirname, '../node_modules'),
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || 3000,
+    env = process.env.NODE_ENV || 'local';
 
 //Set up basic pass-through
 app.use('/webroot', express.static(webroot));
 app.use('/node_modules', express.static(node_modules));
 
-//Routes    
+//Routes
+//using /x indicates a system route thus triggering a health check
+app.use('/x/', routes.health);
+    
 app.route('/').get(routes.index);
 
 //Set-up Listener
