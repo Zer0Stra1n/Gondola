@@ -1,9 +1,8 @@
 var routes = module.exports,
-    path = require('path'),
-    express = require('express'),
     os = require('os'),
+    path = require('path'),
     webroot = path.resolve(__dirname, '../webroot'),
-    env = process.env.NODE_ENV || 'local';;
+    env = process.env.NODE_ENV || 'local';
 
 routes.index = (req, res) => {
     res.sendFile(webroot + '/index.html');
