@@ -5,17 +5,27 @@ var Builder = require('systemjs-builder');
 var builder = new Builder('.', 'webroot/system.config.js');
 builder.config({
     // paths: {
-    //     'angular2':  'node_modules/angular2'
-    // },
-    meta: {
-       '@angular/*' : {build: false},
-       'rxjs/*' : {build: false},
-       'ng2-bootstrap/*' : {build: false}
-    }      
+    //     '@angular':  'node_modules/@angular/'
+    // },    
 });
 
+builder.bundle('webroot/boot.js - [webroot/**/*]', 'webroot/dependencies.min.js',
+    {
+        normalize: true,
+        minify: true,
+        mangle: true,
+        globalDefs: { DEBUG: false }
+    }
+).then(function(output) {
+  console.log('Angular Build complete');
+  console.log(output.modules);
+})
+.catch(function(err) {
+  console.log('Build error');
+  console.log(err);
+});
 
-builder.bundle('webroot/boot.js - [angular2 && rxjs]', 'webroot/boot.min.js', 
+builder.bundle('webroot/boot.js - webroot/dependencies.min.js', 'webroot/boot.min.js', 
     {
         normalize: true,
         minify: true,
@@ -23,7 +33,7 @@ builder.bundle('webroot/boot.js - [angular2 && rxjs]', 'webroot/boot.min.js',
         globalDefs: { DEBUG: false }
     })
 .then(function(output) {
-  console.log('Build complete');
+  console.log('App Build complete');
   console.log(output.modules);
 })
 .catch(function(err) {
