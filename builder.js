@@ -2,13 +2,13 @@ var Builder = require('systemjs-builder');
 
 // optional constructor options
 // sets the baseURL and loads the configuration file
-var builder = new Builder('.', 'webroot/system-config.js');
+var builder = new Builder('.', 'webroot/system.config.js');
 builder.config({
     // paths: {
     //     'angular2':  'node_modules/angular2'
     // },
     meta: {
-       'angular2/*' : {build: false},
+       '@angular/*' : {build: false},
        'rxjs/*' : {build: false},
        'ng2-bootstrap/*' : {build: false}
     }      

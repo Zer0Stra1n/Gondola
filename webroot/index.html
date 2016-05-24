@@ -18,17 +18,16 @@
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <!--<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>-->
 
     <!-- Actual Functional Dependency Libraries -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.js"></script>
 
     <!-- Load System Config -->
-    <script src="webroot/system-config.js"></script>
+    <script src="webroot/system.config.js"></script>
     <script>
         System.import('webroot/boot')
             .then(null, console.error.bind(console));

@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {Component} from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 //Shell template
 import gondolaTmpl from './gondola.html';
@@ -22,7 +22,7 @@ import {ArchiveViewComponenet} from './archive_view/archive_view';
     {
         path: '/',
         name: 'Archive',
-        component: ArchiveViewComponenet 
+        component: ArchiveViewComponenet
     },
         {
         path: '/boop',
@@ -36,7 +36,7 @@ import {ArchiveViewComponenet} from './archive_view/archive_view';
     }
 ])
 
-export class Gondola { 
+export class Gondola {
     public title = 'Tour of Heroes';
     public hero = 'Windstorm';
 }
