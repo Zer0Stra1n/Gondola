@@ -3,7 +3,7 @@
 
     // map tells the System loader where to look for things
     var map = {
-        '@angular': 'node_modules/@angular',
+        '@angular': 'webroot/angular2.min.js',
         'text': 'node_modules/systemjs-plugin-text/text.js',
         'dependencies': 'webroot/dependencies.min.js',
         'boot': 'webroot/boot.min.js'
@@ -11,21 +11,8 @@
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'rxjs': { defaultExtension: false },
-        'webroot': { format: 'register', defaultExtension: 'js', meta: { '*.html': { loader: 'text' }, '*.css': { loader: 'text' } } }
+        'webroot': { format: 'register', defaultJSExtensions: true, meta: { '*.html': { loader: 'text' }, '*.css': { loader: 'text' } } }
     };
-
-    var packageNames = [
-        '@angular/common',
-        '@angular/compiler',
-        '@angular/core',
-        '@angular/http',
-        '@angular/platform-browser',
-        '@angular/platform-browser-dynamic',
-        '@angular/router',
-        '@angular/router-deprecated',
-        '@angular/testing',
-        '@angular/upgrade'
-    ];
 
     var bundles = {
         'boot': ['webroot/boot.js',
@@ -43,11 +30,6 @@
             'webroot/components/header/header.html',
             'webroot/components/gondola.html']
     }
-
-    // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
-    packageNames.forEach(function (pkgName) {
-        packages[pkgName] = { main: 'index.js', defaultJSExtensions: true };
-    });
 
     var config = {
         map: map,
